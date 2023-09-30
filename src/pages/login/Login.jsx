@@ -1,53 +1,25 @@
 import './Login.scss';
-
+import Logo from "./img/logo.svg";
 function Login() {
   return (
-    // <div className="columns ">
-    //   <div className="login-box">
-    //     <form className="form">
-    //       <div className="signin">
-    //         <h1 className="topline">Log in to your account</h1>
-    //         <br />
-    //         <div className="input-field">
-    //           <input
-    //             id="email"
-    //             type="text"
-    //             name="email"
-    //             placeholder="* Email"
-    //           />
-    //         </div>
-
-    //         <div className="input-field">
-    //           <input id="password" name="password" placeholder="* Password" />
-    //           <div className="password-toggle-button">
-    //             {/* <i
-    //                 className={showPassword ? "fas fa-eye-slash" : "fas fa-eye"}
-    //               ></i> */}
-    //           </div>
-    //         </div>
-    //         <div className="forgot-password-link">
-    //           <a href="/forgot-password">Forgot Password?</a>
-    //         </div>
-    //         <div className="login-box-button">
-    //           <button type="submit" style={{ cursor: "pointer" }}>
-    //             <i className="fas fa-sign-in-alt"></i>
-    //             <span style={{ marginLeft: "0.5rem", fontWeight: "normal" }}>
-    //               Log In
-    //             </span>
-    //           </button>
-    //         </div>
-    //       </div>
-    //     </form>
-    //   </div>
-    // </div>
-
-    <div className="loginBox">
-      <div>
-
+    <div className='login'>
+      <div className='leftSide'>
+        <div className='mainActivity'>
+          <div className="logo"><img src={Logo}/><p>TechKnow</p></div>
+          <div className="loginText">Log in to your account</div>
+          <div className="userInput">
+            <div className="userInputText">Username</div>
+            <input type="text" placeholder='Enter your username' />
+          </div>
+          <div className="pswdInput">
+            <div className="pswdInputText">Password</div>
+            <input type="text" placeholder='Enter your password'/>
+          </div>
+          <div className="forgotPswd">Forgot Password?</div>
+          <div className="submit">Log In</div>
+        </div>
       </div>
-      <div>
-
-      </div>
+      <div className='rightSide'></div>
     </div>
   );
 }
