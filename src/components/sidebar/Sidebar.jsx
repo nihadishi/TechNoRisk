@@ -50,7 +50,7 @@ function Sidebar() {
             <li className="app-sidebar__heading"></li>
             <li>
               <NavLink
-                to="/"
+                to="/dashboard"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "mm-active" : ""
                 }

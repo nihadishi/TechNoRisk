@@ -1,0 +1,81 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-around;
+  padding: 30px;
+}
+.details {
+  background-color: #fff;
+  min-width: 20%;
+  min-height: 180px;
+  border-radius: 10px;
+  transition: 1s all;
+  &:hover{
+    cursor: pointer;
+    background-color: #f5faff;
+    scale: 1.06;
+  }
+  &Text {
+    color: #120080;
+    font-weight: 700;
+    font-size: 27px;
+    padding-left: 19px;
+  }
+  &Img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 82px;
+    height: 82px;
+    margin: 0 auto;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+  &Name {
+    
+    text-align: center;
+    padding: 23px;
+    color: black;
+  }
+}
+.intoDetailText{
+    font-size: 21px;
+    padding-left: 23px;
+    color: black;
+
+}
+
+
+.classes{
+
+}
+.cohort{
+  max-width: 353px;
+  max-height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &Name{
+    font-size: 20px;
+  }
+  &Person{
+
+  }
+  &Date{
+
+  }
+  &Type{
+
+  }
+  &iCode{
+    position: absolute;
+    top: 24px;
+    right: 16px;
+  }
+}

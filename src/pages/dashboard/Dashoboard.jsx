@@ -1,6 +1,6 @@
 import { DataGrid } from "@mui/x-data-grid";
 import Layout from "../../components/layout/Layout";
-
+import "./style.scss";
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
   { field: "firstName", headerName: "First name", width: 130 },
@@ -151,21 +151,66 @@ const rows = [
 
 const Dashboard = () => {
   return (
-    <Layout>
-      <div style={{ height: 400, width: "100%" }}>
-        <DataGrid
-          rows={rows}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          checkboxSelection
-        />
-      </div>
-    </Layout>
+    <>
+      <Layout>
+        <div style={{ height: "auto", width: "100%" }}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 5 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+            checkboxSelection
+          />
+        </div>
+        <div className="about">
+          <div className="details">
+            <div className="detailsText">Teacher</div>
+            <div className="detailsImg">
+              <img
+                src="https://cdnb.artstation.com/p/assets/images/images/012/640/661/medium/antoine-fromager-render001.jpg?1535770795"
+                alt="img"
+              />
+            </div>
+            <div className="detailsName">Knyaz Yaqublu</div>
+          </div>
+          <div className="details">
+            <div className="detailsText">Teacher asistant</div>
+            <div className="detailsImg">
+              <img
+                src="https://cdnb.artstation.com/p/assets/images/images/012/640/661/medium/antoine-fromager-render001.jpg?1535770795"
+                alt="img"
+              />
+            </div>
+            <div className="detailsName">Zeynab</div>
+          </div>
+          <div className="details">
+            <div className="detailsText">Class info</div>
+            <div className="intoDetailText">asdasdaf</div>
+            <div className="intoDetailText">asdasdaf</div>
+          </div>
+          <div className="details">
+            <div className="detailsText">Materials</div>
+            <p className="intoDetailText">Nesee</p>
+            <p className="intoDetailText">Nesee</p>
+          </div>
+        </div>
+        <div className="classes">
+          <div className="cohort">
+            <div className="cohortName">UX/UI Design</div>
+            <div className="cohortPerson">Knyaz Yaqublu, Zeynab Nesirova</div>
+            <div>
+            <div className="cohortDate">09/15</div>
+            <div className="cohortType">Students</div>
+            </div>
+            <div className="cohortiCode"></div>
+          </div>
+        </div>
+      </Layout>
+    </>
   );
 };
 export default Dashboard;
