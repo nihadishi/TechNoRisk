@@ -60,64 +60,15 @@ function Sidebar() {
             </li>
             <li>
               <NavLink
-                to="/products-category"
+                to="/requests"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "mm-active" : ""
                 }
               >
-                Products Category
+                Requests
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/products"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "mm-active" : ""
-                }
-              >
-                Products
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/departments"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "mm-active" : ""
-                }
-              >
-                Departments
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/positions"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "mm-active" : ""
-                }
-              >
-                Positions
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/employees"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "mm-active" : ""
-                }
-              >
-                Employees
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/transactions"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "mm-active" : ""
-                }
-              >
-                Products Transactions
-              </NavLink>
-            </li>
+
 
           </ul>
         </div>
