@@ -1,5 +1,8 @@
 import { DataGrid } from "@mui/x-data-grid";
 import Layout from "../../components/layout/Layout";
+
+const editButtonCount = 5; // İlk beş satır için "Edit" düğmesi sayısı
+
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
   { field: "firstName", headerName: "First name", width: 130 },
@@ -44,8 +47,30 @@ const columns = [
     sortable: false,
     width: 160,
   },
+  {
+    field: "action", // Yeni sütun "action" adında
+    headerName: "Action",
+    sortable: false,
+    width: 100,
+    renderCell: (params) => {
+      // İlk beş satır için "Edit" düğmesi, diğerleri için "Accept" düğmesi görüntülüyoruz
+      if (params.row.id <= editButtonCount) {
+        return (
+          <button onClick={() => handleEdit(params.row.id)}>Edit</button>
+        );
+      } else {
+        return (
+          <button
+            onClick={() => handleAccept(params.row.id)}
+            style={{ backgroundColor: "green", color: "white" }} // Yeşil renkli stil
+          >
+            Accept
+          </button>
+        );
+      }
+    },
+  },
 ];
-
 const rows = [
   {
     id: 1,
@@ -148,7 +173,10 @@ const rows = [
   },
 ];
 
+
 const Requests = () => {
+  // handleEdit ve handleAccept fonksiyonlarını tanımlayın
+
   return (
     <>
       <Layout>
@@ -169,4 +197,5 @@ const Requests = () => {
     </>
   );
 };
+
 export default Requests;
