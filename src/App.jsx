@@ -1,11 +1,22 @@
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
 
 function App() {
-
+  let routes = [
+    {
+      path: "/login",
+      element: <Login />,
+    },
+  ];
 
   return (
-    <>
-      <h1>test</h1>
-    </>
+    <Routes>
+      {routes.map((index) => {
+        return (
+          <Route key={index.path} path={index.path} element={index.element} />
+        );
+      })}
+    </Routes>
   );
 }
 
