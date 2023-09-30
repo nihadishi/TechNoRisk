@@ -51,31 +51,52 @@
 
 
 .classes{
-
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .cohort{
+  padding: 16px;
   max-width: 353px;
+  width: 30%;
+  height:200px ;
   max-height: 450px;
   background-color: #fff;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 10px;
   &Name{
     font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 8px;
   }
   &Person{
-
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 16px;
+    color: #7A7E87;
   }
   &Date{
-
+    font-size: 24px;
+    font-weight: 600;
   }
   &Type{
-
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin: auto 0;
   }
   &iCode{
     position: absolute;
     top: 24px;
     right: 16px;
+    background-color: #F3F7FE;
+    border: 5px;
+    padding: 2px 8px;
+    color: #1665F8;
+    text-align: center;
   }
 }

@@ -198,15 +198,43 @@ const Dashboard = () => {
             <p className="intoDetailText">Nesee</p>
           </div>
         </div>
+          <div style={{fontSize:"28px", fontWeight:"600",paddingLeft:"16px"}}>Classes</div>
         <div className="classes">
           <div className="cohort">
             <div className="cohortName">UX/UI Design</div>
             <div className="cohortPerson">Knyaz Yaqublu, Zeynab Nesirova</div>
-            <div>
+            <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
             <div className="cohortDate">09/15</div>
             <div className="cohortType">Students</div>
             </div>
-            <div className="cohortiCode"></div>
+            <div className="cohortiCode">I202</div>
+          </div>
+          <div className="cohort">
+            <div className="cohortName">UX/UI Design</div>
+            <div className="cohortPerson">Knyaz Yaqublu, Zeynab Nesirova</div>
+            <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+            <div className="cohortDate">09/15</div>
+            <div className="cohortType">Students</div>
+            </div>
+            <div className="cohortiCode">I202</div>
+          </div>
+          <div className="cohort">
+            <div className="cohortName">UX/UI Design</div>
+            <div className="cohortPerson">Knyaz Yaqublu, Zeynab Nesirova</div>
+            <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+            <div className="cohortDate">09/15</div>
+            <div className="cohortType">Students</div>
+            </div>
+            <div className="cohortiCode">I202</div>
+          </div>
+          <div className="cohort">
+            <div className="cohortName">UX/UI Design</div>
+            <div className="cohortPerson">Knyaz Yaqublu, Zeynab Nesirova</div>
+            <div style={{display:"flex", flexDirection:"row", gap:"10px"}}>
+            <div className="cohortDate">09/15</div>
+            <div className="cohortType">Students</div>
+            </div>
+            <div className="cohortiCode">I202</div>
           </div>
         </div>
       </Layout>
