@@ -1,7 +1,8 @@
 import { DataGrid } from "@mui/x-data-grid";
 import Layout from "../../components/layout/Layout";
+import { useState } from "react";
 
-const editButtonCount = 5; // İlk beş satır için "Edit" düğmesi sayısı
+const editButtonCount = 2; // İlk beş satır için "Edit" düğmesi sayısı
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -53,22 +54,27 @@ const columns = [
     sortable: false,
     width: 100,
     renderCell: (params) => {
-      // İlk beş satır için "Edit" düğmesi, diğerleri için "Accept" düğmesi görüntülüyoruz
-      if (params.row.id <= editButtonCount) {
-        return (
-          <button onClick={() => handleEdit(params.row.id)}>Edit</button>
-        );
-      } else {
-        return (
-          <button
-            onClick={() => handleAccept(params.row.id)}
-            style={{ backgroundColor: "green", color: "white" }} // Yeşil renkli stil
-          >
-            Accept
-          </button>
-        );
+      const [buttonText, setButtonText] = useState(
+        params.row.id <= editButtonCount ? "Edit" : "Accept"
+      );
+      const handleButtonClick = () => {
+        if (params.row.id >= editButtonCount) {
+          setButtonText("Edit");
+          handleEdit(params.row.id);
+        } else {
+          if (buttonText === "Accept") {
+            setButtonText("Edit");
+            handleEdit(params.row.id);
+          }
+        }
       }
-    },
+      return (
+        <button onClick={handleButtonClick} style={{ backgroundColor: buttonText === "Accept" ? "#34C759" : "white", color: buttonText === "Accept" ? "white" : "#34C759", width: "100px", height: "35px", borderRadius: "5px", border: buttonText === "Accept" ? "none" : "1px solid #34C759" }}>
+          {buttonText}
+        </button>
+      );
+    }
+    
   },
 ];
 const rows = [
@@ -175,8 +181,13 @@ const rows = [
 
 
 const Requests = () => {
-  // handleEdit ve handleAccept fonksiyonlarını tanımlayın
+  const handleEdit = (id) => {
+    // Edit işlemi yapmak için bu fonksiyonu kullanabilirsiniz.
+  };
 
+  const handleAccept = (id) => {
+    // Accept işlemi yapmak için bu fonksiyonu kullanabilirsiniz.
+  };
   return (
     <>
       <Layout>
